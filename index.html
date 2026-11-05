@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMLIGHT BIRTHDAY | House Party</title>
+    <meta name="description" content="IMLIGHT BIRTHDAY HOUSE PARTY - 13 DEC | GOBA (Mbezi) | 18+ | Black & White Dress Code">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0a0a0a;
+    --bg-elevated: #111111;
+    --bg-card: #161616;
+    --bg-card-hover: #1c1c1c;
+    --text: #ffffff;
+    --text-muted: #a0a0a0;
+    --text-dim: #666666;
+    --accent: #e8e8e8;
+    --accent-bright: #ffffff;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.15);
+    --gradient: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    --shine: linear-gradient(135deg, #ffffff 0%, #c0c0c0 50%, #ffffff 100%);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --success: #22c55e;
+    --warning: #f59e0b;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: var(--transition);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    background: var(--shine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo-sub {
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--text);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-cta {
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.75) 40%,
+        rgba(10, 10, 10, 0.95) 80%,
+        var(--bg) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 120px 24px 80px;
+    max-width: 900px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--border-strong);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 12vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.title-line {
+    display: block;
+}
+
+.title-line.accent {
+    background: var(--shine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    letter-spacing: 12px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 36px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--text);
+}
+
+.btn-ticket {
+    width: 100%;
+    margin-top: 8px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+}
+
+.btn-ticket:hover,
+.btn-ticket.primary {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.btn.full {
+    width: 100%;
+}
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-num {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--border-strong);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.mouse {
+    width: 22px;
+    height: 34px;
+    border: 1.5px solid var(--text-muted);
+    border-radius: 12px;
+    position: relative;
+}
+
+.mouse::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 6px;
+    background: var(--text-muted);
+    border-radius: 2px;
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 56px;
+}
+
+.section-header.light .section-title,
+.section-header.light .section-desc {
+    color: var(--text);
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.about-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.about-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-strong);
+    transform: translateY(-4px);
+}
+
+.about-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.about-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ===== FEATURES ===== */
+.features {
+    background: var(--bg-elevated);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-strong);
+    transform: translateY(-4px);
+}
+
+.feature-icon-wrap {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.feature-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+}
+
+.feature-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===== TICKETS ===== */
+.tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ticket-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    position: relative;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.ticket-card.featured {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: linear-gradient(160deg, #1a1a1a 0%, #121212 100%);
+}
+
+.ticket-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+
+.ticket-header {
+    margin-bottom: 24px;
+}
+
+.ticket-type {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ticket-price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.currency {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.ticket-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(34, 197, 94, 0.12);
+    color: var(--success);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.ticket-status .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--success);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.ticket-features {
+    margin-bottom: 28px;
+    flex-grow: 1;
+}
+
+.ticket-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.ticket-features li:last-child {
+    border-bottom: none;
+}
+
+.ticket-note {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.ticket-deadline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+    padding: 16px 24px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: var(--radius-sm);
+    color: var(--warning);
+    font-size: 0.95rem;
+    font-weight: 500;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ticket-deadline strong {
+    color: #fbbf24;
+}
+
+/* ===== LOCATION ===== */
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.location-text .section-title {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.location-text p {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.location-details {
+    margin-bottom: 32px;
+}
+
+.location-details li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.location-details strong {
+    color: var(--text);
+    margin-right: 8px;
+}
+
+.map-placeholder {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.map-pin {
+    font-size: 2.5rem;
+}
+
+.map-placeholder p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+}
+
+.map-placeholder span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ===== CONTACT ===== */
+.contact-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.contact-left,
+.contact-right {
+    padding: 48px 40px;
+}
+
+.contact-left {
+    background: linear-gradient(160deg, #1a1a1a 0%, #111 100%);
+    border-right: 1px solid var(--border);
+}
+
+.contact-left .section-title {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.contact-left > p {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--border-strong);
+}
+
+.contact-icon {
+    font-size: 1.4rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+}
+
+.contact-item .label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.contact-item .value {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--border-strong);
+    background: var(--bg-elevated);
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a0a0a0' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-dim);
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border);
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand .logo-text {
+    font-size: 1.8rem;
+}
+
+.footer-brand .logo-sub {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--text);
+}
+
+.footer-contact p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+/* ===== TOAST ===== */
+.toast {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--text);
+    color: var(--bg);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    z-index: 2000;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .location-content,
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+    .contact-left {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--bg);
+        flex-direction: column;
+        padding: 100px 40px 40px;
+        gap: 24px;
+        transition: right 0.35s ease;
+        border-left: 1px solid var(--border);
+        z-index: 999;
+    }
+    .nav-links.active {
+        right: 0;
+    }
+    .nav-cta {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+    .hero-stats {
+        gap: 20px;
+    }
+    .section {
+        padding: 70px 0;
+    }
+    .contact-left,
+    .contact-right {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">IMLIGHT</span>
+                <span class="logo-sub">BIRTHDAY</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Event</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta" onclick="scrollToSection('tickets')">Get Ticket</button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="banner.jpg" alt="IMLIGHT Birthday Banner" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">13 DECEMBER • 24 HOURS</div>
+            <h1 class="hero-title">
+                <span class="title-line">IMLIGHT</span>
+                <span class="title-line accent">BIRTHDAY</span>
+            </h1>
+            <p class="hero-subtitle">HOUSE PARTY</p>
+            <p class="hero-desc">Location: GOBA (Mbezi) • Dress Code: Black & White • 18+</p>
+            <div class="hero-buttons">
+                <a href="#tickets" class="btn btn-primary">Get Your Ticket</a>
+                <a href="#about" class="btn btn-secondary">Event Details</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">50K</span>
+                    <span class="stat-label">Boys</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">30K</span>
+                    <span class="stat-label">Girls</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">18+</span>
+                    <span class="stat-label">Only</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About / Event Info -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">THE EVENT</span>
+                <h2 class="section-title">One Night. Unlimited Vibes.</h2>
+                <p class="section-desc">Join us for the biggest house party of the year. 24 hours of pure energy, music, drinks, swimming and unforgettable memories in Goba, Mbezi.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">📅</div>
+                    <h3>Date</h3>
+                    <p>13 December 2026</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>GOBA (Mbezi)</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">⏰</div>
+                    <h3>Duration</h3>
+                    <p>24 Hours Non-Stop</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">👔</div>
+                    <h3>Dress Code</h3>
+                    <p>Black & White Only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section features">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">WHAT'S INCLUDED</span>
+                <h2 class="section-title">Experience Everything</h2>
+                <p class="section-desc">From premium drinks to swimming and shisha — everything is set for the perfect night.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M8 2h8l1 4H7L8 2zM7 6h10v12a2 2 0 01-2 2H9a2 2 0 01-2-2V6z"/>
+                            <path d="M9 10h6M9 14h4"/>
+                        </svg>
+                    </div>
+                    <h3>Premium Drinks</h3>
+                    <p>Cold beers, spirits, cocktails and Tanzania's finest selections. Stay hydrated and elevated all night.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2C8 6 4 9 4 13a8 8 0 0016 0c0-4-4-7-8-11z"/>
+                            <path d="M12 13v5"/>
+                        </svg>
+                    </div>
+                    <h3>Swimming</h3>
+                    <p>Cool off in the pool under the stars. Perfect for those late-night dips and poolside vibes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 11l9-8 9 8M5 10v10h4v-6h6v6h4V10"/>
+                        </svg>
+                    </div>
+                    <h3>Foods</h3>
+                    <p>Delicious bites and full meals available throughout the night. Never go hungry while you party.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="3"/>
+                            <path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+                            <path d="M16 4l2 2M8 4L6 6"/>
+                        </svg>
+                    </div>
+                    <h3>Shisha</h3>
+                    <p>Premium shisha lounge area. Multiple flavors, chill vibes and perfect for conversations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 18V5l12-2v13"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <circle cx="18" cy="16" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Music & DJs</h3>
+                    <p>Top DJs spinning the best Afrobeat, Amapiano, Hip-Hop and House all night long.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>House Party Energy</h3>
+                    <p>Exclusive atmosphere. Limited capacity. Pure vibes with the right crowd only.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets -->
+    <section id="tickets" class="section tickets">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">TICKETS</span>
+                <h2 class="section-title">Secure Your Spot</h2>
+                <p class="section-desc">Limited tickets available. Prices are fixed. Dress code is strictly enforced.</p>
+            </div>
+            <div class="tickets-grid">
+                <div class="ticket-card">
+                    <div class="ticket-header">
+                        <span class="ticket-type">BOYS</span>
+                        <div class="ticket-price">
+                            <span class="currency">TZS</span>
+                            <span class="amount">50,000</span>
+                        </div>
+                    </div>
+                    <div class="ticket-status">
+                        <span class="dot"></span>
+                        Available
+                    </div>
+                    <ul class="ticket-features">
+                        <li>✓ Full 24-hour access</li>
+                        <li>✓ All drinks area access</li>
+                        <li>✓ Swimming pool</li>
+                        <li>✓ Shisha lounge</li>
+                        <li>✓ Music & performances</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-ticket" onclick="preselectTicket('boys')">Request Ticket</a>
+                </div>
+                <div class="ticket-card featured">
+                    <div class="ticket-badge">POPULAR</div>
+                    <div class="ticket-header">
+                        <span class="ticket-type">GIRLS</span>
+                        <div class="ticket-price">
+                            <span class="currency">TZS</span>
+                            <span class="amount">30,000</span>
+                        </div>
+                    </div>
+                    <div class="ticket-status">
+                        <span class="dot"></span>
+                        Available
+                    </div>
+                    <ul class="ticket-features">
+                        <li>✓ Full 24-hour access</li>
+                        <li>✓ All drinks area access</li>
+                        <li>✓ Swimming pool</li>
+                        <li>✓ Shisha lounge</li>
+                        <li>✓ Music & performances</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-ticket primary" onclick="preselectTicket('girls')">Request Ticket</a>
+                </div>
+            </div>
+
+            <div class="ticket-deadline">
+                ⏳ Ticket requests close on <strong>7 December 2026</strong>
+            </div>
+
+            <p class="ticket-note">Dress Code: <strong>Black and White only</strong>. Strictly 18+. No exceptions.</p>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="section location">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-text">
+                    <span class="section-tag">WHERE TO FIND US</span>
+                    <h2 class="section-title">GOBA (Mbezi)</h2>
+                    <p>The venue is located in Goba, Mbezi area. Easy to reach and private enough for the perfect house party atmosphere.</p>
+                    <ul class="location-details">
+                        <li><strong>Area:</strong> Goba, Mbezi</li>
+                        <li><strong>City:</strong> Dar es Salaam</li>
+                        <li><strong>Date:</strong> 13 December 2026</li>
+                        <li><strong>Time:</strong> 24 Hours</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Directions / Info</a>
+                </div>
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <div class="map-pin">📍</div>
+                        <p>GOBA (MBEZI)</p>
+                        <span>Dar es Salaam, Tanzania</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-left">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h2 class="section-title">Ready to Party?</h2>
+                    <p>Fill the form and click <strong>Send Request</strong>. It will open WhatsApp with your request ready to send to <strong>0743 351 289</strong>.</p>
+                    <div class="contact-info">
+                        <a href="https://wa.me/255743351289" target="_blank" rel="noopener" class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <span class="label">Call / WhatsApp</span>
+                                <span class="value">0743 351 289</span>
+                            </div>
+                        </a>
+                        <a href="mailto:imlightdigital@gmail.com" class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <span class="label">Email</span>
+                                <span class="value">imlightdigital@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="ticket" name="ticket" required>
+                                <option value="" disabled selected>Select Ticket</option>
+                                <option value="boys">Boys - 50,000 TZS (Available)</option>
+                                <option value="girls">Girls - 30,000 TZS (Available)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="3" placeholder="Any message (optional)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full">Send Request via WhatsApp</button>
+                        <p class="form-note">You will be redirected to WhatsApp to confirm and send the request.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">IMLIGHT</span>
+                    <span class="logo-sub">BIRTHDAY</span>
+                    <p>House Party • 13 Dec 2026 • Goba (Mbezi)</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">Event</a>
+                    <a href="#features">Features</a>
+                    <a href="#tickets">Tickets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <p>0743 351 289</p>
+                    <p>imlightdigital@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IMLIGHT. All rights reserved. 18+ Only. Black & White Dress Code. Ticket requests close 7 Dec 2026.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Toast -->
+    <div class="toast" id="toast">
+        <span>✓ Opening WhatsApp… Send the message to complete your request.</span>
+    </div>
+
+    <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Smooth scroll helper
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Preselect ticket when clicking "Request Ticket"
+    function preselectTicket(type) {
+        const select = document.getElementById('ticket');
+        if (select) {
+            select.value = type;
+        }
+    }
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + 120;
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            const id = section.getAttribute('id');
+            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+            if (link) {
+                if (scrollY >= top && scrollY < top + height) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            }
+        });
+    });
+
+    // Form submit → WhatsApp
+    function handleSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value.trim();
+        const phone = form.phone.value.trim();
+        const ticket = form.ticket.value;
+        const message = form.message.value.trim();
+
+        if (!name || !phone || !ticket) return;
+
+        // Show toast
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 4000);
+
+        // Build WhatsApp message
+        const ticketText = ticket === 'boys' ? 'Boys - 50,000 TZS' : 'Girls - 30,000 TZS';
+        let text = `Habari! Nataka ticket ya IMLIGHT Birthday Party.\n\n`;
+        text += `👤 Jina: ${name}\n`;
+        text += `📱 Simu: ${phone}\n`;
+        text += `🎫 Ticket: ${ticketText}\n`;
+        if (message) {
+            text += `💬 Ujumbe: ${message}\n`;
+        }
+        text += `\nAsante!`;
+
+        const encoded = encodeURIComponent(text);
+        // WhatsApp number: 0743 351 289 → +255 743 351 289
+        const waUrl = `https://wa.me/255743351289?text=${encoded}`;
+
+        // Open WhatsApp
+        window.open(waUrl, '_blank');
+
+        // Optional: reset form after short delay
+        setTimeout(() => form.reset(), 800);
+    }
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Add animation classes
+    document.addEventListener('DOMContentLoaded', () => {
+        const animateEls = document.querySelectorAll(
+            '.about-card, .feature-card, .ticket-card, .section-header, .location-text, .map-placeholder, .contact-card'
+        );
+        animateEls.forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = `opacity 0.6s ease ${i * 0.05}s, transform 0.6s ease ${i * 0.05}s`;
+            observer.observe(el);
+        });
+    });
+
+    // Add visible class styles dynamically
+    const style = document.createElement('style');
+    style.textContent = `
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+    document.head.appendChild(style);
+    </script>
+</body>
+</html>
