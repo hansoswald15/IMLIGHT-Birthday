@@ -715,6 +715,86 @@ ul {
     color: #fbbf24;
 }
 
+/* Payment method box */
+.payment-box {
+    margin-top: 36px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    text-align: center;
+}
+
+.payment-box-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.payment-logo {
+    width: 48px;
+    height: 48px;
+    background: #00a651;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.7rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.payment-details {
+    text-align: left;
+}
+
+.payment-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+}
+
+.payment-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: var(--text);
+    line-height: 1.1;
+}
+
+.payment-type {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.payment-note {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.payment-note strong {
+    color: var(--text);
+}
+
 /* ===== LOCATION ===== */
 .location-content {
     display: grid;
@@ -1291,6 +1371,24 @@ ul {
                 ⏳ Ticket requests close on <strong>7 December 2026</strong>
             </div>
 
+            <!-- Payment Method -->
+            <div class="payment-box">
+                <div class="payment-box-title">Ticket Payment Method</div>
+                <div class="payment-method">
+                    <div class="payment-logo">M-PESA</div>
+                    <div class="payment-details">
+                        <div class="payment-name">IMLIGHT DIGITAL</div>
+                        <div class="payment-number">355177421</div>
+                        <div class="payment-type">M-Pesa Lipa Namba</div>
+                    </div>
+                </div>
+                <p class="payment-note">
+                    After requesting your ticket, pay via <strong>M-Pesa</strong> to<br>
+                    <strong>IMLIGHT DIGITAL – 355177421</strong><br>
+                    then send the confirmation message on WhatsApp.
+                </p>
+            </div>
+
             <p class="ticket-note">Dress Code: <strong>Black and White only</strong>. Strictly 18+. No exceptions.</p>
         </div>
     </section>
@@ -1329,7 +1427,7 @@ ul {
                 <div class="contact-left">
                     <span class="section-tag">GET IN TOUCH</span>
                     <h2 class="section-title">Ready to Party?</h2>
-                    <p>Fill the form and click <strong>Send Request</strong>. It will open WhatsApp with your request ready to send to <strong>0743 351 289</strong>.</p>
+                    <p>Fill the form and click <strong>Send Request</strong>. It opens WhatsApp to <strong>0743 351 289</strong>. After that, pay via M-Pesa to <strong>IMLIGHT DIGITAL – 355177421</strong>.</p>
                     <div class="contact-info">
                         <a href="https://wa.me/255743351289" target="_blank" rel="noopener" class="contact-item">
                             <div class="contact-icon">📞</div>
@@ -1338,6 +1436,13 @@ ul {
                                 <span class="value">0743 351 289</span>
                             </div>
                         </a>
+                        <div class="contact-item" style="cursor:default;">
+                            <div class="contact-icon">💳</div>
+                            <div>
+                                <span class="label">M-Pesa Payment</span>
+                                <span class="value">IMLIGHT DIGITAL – 355177421</span>
+                            </div>
+                        </div>
                         <a href="mailto:imlightdigital@gmail.com" class="contact-item">
                             <div class="contact-icon">✉️</div>
                             <div>
@@ -1495,6 +1600,7 @@ ul {
         if (message) {
             text += `💬 Ujumbe: ${message}\n`;
         }
+        text += `\n💳 Malipo: M-Pesa → IMLIGHT DIGITAL – 355177421\n`;
         text += `\nAsante!`;
 
         const encoded = encodeURIComponent(text);
